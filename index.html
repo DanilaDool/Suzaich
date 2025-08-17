@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Suzaich — расчёт по дате рождения</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="public/c0547769-e468-4f7b-a96b-86159f71a8f3.png">
+    <link rel="stylesheet" href="style.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Inter', 'ui-sans-serif', 'system-ui'] },
+                    colors: {
+                        brand: { 50:'#fff8f0',100:'#ffe4c2',200:'#ffc680',300:'#ffad4d',400:'#ff9a26',500:'#ff8c00',600:'#e07c00',700:'#b86200',800:'#8f4d00',900:'#733d00' },
+                        ink:   { 900:'#0f0f0f',800:'#1a1a1a',700:'#1e1c1a' }
+                    },
+                    boxShadow: {
+                        soft: '0 10px 30px rgba(0,0,0,0.25)',
+                        glow: '0 0 0 6px rgba(255,140,0,0.15)'
+                    },
+                    backdropBlur: { xs: '2px' }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gradient-to-br from-[#0f0f0f] via-[#1a1a1a] to-[#1e1c1a] text-white font-sans antialiased selection:bg-brand-500/30">
+
+<header class="fixed top-0 inset-x-0 z-50 backdrop-blur bg-ink-900/30 border-b border-white/10">
+    <div class="mx-auto max-w-7xl px-4 py-3 flex items-center justify-between">
+        <a href="#" class="flex items-center gap-2 font-extrabold tracking-wide">
+            <span class="inline-block w-2.5 h-2.5 rounded-full bg-brand-500 animate-pulse"></span>
+            <span>Suzaich</span>
+        </a>
+        <nav class="hidden sm:flex items-center gap-6 text-sm text-gray-200">
+            <a href="#about" class="hover:text-white transition">О системе</a>
+            <a href="#form"  class="hover:text-white transition">Расчёт</a>
+            <a href="#famous-static"  class="hover:text-white transition">Числа знаменитостей</a>
+
+        </nav>
+        <a href="#form" class="ml-4 inline-flex items-center justify-center rounded-full px-4 py-2 bg-gradient-to-r from-brand-500 to-rose-500 font-semibold shadow-soft hover:opacity-95 focus:outline-none focus:ring-2 focus:ring-brand-500/50 transition">
+            Получить расчёт
+        </a>
+    </div>
+</header>
+
+<section class="relative min-h-[80svh] sm:min-h-screen flex items-center justify-center px-4 pt-20 sm:pt-24 overflow-hidden">
+    <video autoplay muted loop playsinline class="pointer-events-none absolute inset-0 w-full h-full object-cover brightness-50">
+        <source src="public/fire2.mp4" type="video/mp4" />
+        Ваш браузер не поддерживает видео фон.
+    </video>
+    <div class="absolute inset-0 overlay-gradient"></div>
+
+    <div class="relative z-10 mx-auto max-w-3xl text-center">
+        <h1 class="text-3xl sm:text-5xl md:text-6xl font-extrabold mb-4 sm:mb-6 leading-tight drop-shadow balance">
+            Сюцай — узнать судьбу<br class="hidden sm:block"/> по дате рождения
+        </h1>
+        <p class="text-base sm:text-lg md:text-xl text-gray-200/95 mb-6 sm:mb-8 leading-relaxed pretty">
+            Сюцай — авторская система числового анализа личности. Понимайте сильные стороны,
+            дисциплинируйте ум и реализуйте потенциал.
+        </p>
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-3">
+            <a href="#form" class="inline-flex items-center justify-center rounded-full px-6 py-3 bg-gradient-to-r from-brand-500 to-rose-500 font-semibold shadow-soft hover:scale-[1.02] focus:outline-none focus:ring-2 focus:ring-brand-500/50 transition">
+                Рассчитать сейчас
+            </a>
+            <a href="#about" class="inline-flex items-center justify-center rounded-full px-6 py-3 bg-white/10 hover:bg-white/15 border border-white/15 font-semibold transition">
+                Как это работает
+            </a>
+        </div>
+
+        <div class="mt-8 sm:mt-10 opacity-80">
+            <a href="#about" class="inline-flex flex-col items-center text-sm text-gray-300 hover:text-white transition">
+                <span>Листайте вниз</span>
+                <svg class="mt-2 w-5 h-5 animate-bounce" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 9l-7 7-7-7"/>
+                </svg>
+            </a>
+        </div>
+    </div>
+</section>
+
+<section id="about" class="px-4 py-16 sm:py-24 bg-ink-800/40">
+    <div class="mx-auto max-w-7xl grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
+        <div class="bg-white/5 backdrop-blur-xs border border-white/10 rounded-2xl p-6 sm:p-8 shadow-soft">
+            <h2 class="text-2xl sm:text-3xl font-bold text-brand-200 mb-3 sm:mb-4">Что такое Сюцай?</h2>
+            <p class="text-gray-200 leading-relaxed pretty">
+                <span class="text-white font-semibold">Сюцай</span> — система числового анализа личности на основе даты рождения.
+                Помогает увидеть природные таланты, зоны роста и ключевые задачи.
+                Это не «магия», а инструмент осознанности и личной дисциплины.
+            </p>
+        </div>
+        <div class="bg-white/5 backdrop-blur-xs border border-white/10 rounded-2xl p-6 sm:p-8 shadow-soft">
+            <h3 class="text-2xl sm:text-3xl font-bold text-brand-200 mb-3 sm:mb-4">Как работает расчёт?</h3>
+            <ul class="space-y-2.5 sm:space-y-3 text-gray-200">
+                <li><span class="text-white font-semibold">Число сознания</span> — ваше внутреннее «я», ядро восприятия.</li>
+                <li>Расчет - 26.02.2008 = 26 = 2 + 6 = 8</li>
+                <li><span class="text-white font-semibold">Число миссии</span> — роль и задача на жизненном пути.</li>
+                <li>Расчет - 03.01.1984 - 0 + 3 + 1 + 1 + 9 + 8 + 4 = 26 = 2 + 6 = 8</li>
+                <li><span class="text-white font-semibold">Число реализации</span> — проявление в мире, синтез первых двух.</li>
+                <li>Расчет - 29.02.1984 - чс = 2 (2 + 9) мс = 8 (5 + 3) = 2 + 8</li>
+            </ul>
+            <p class="mt-4 text-gray-300">Расчёт моментальный. Без регистрации.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Блок знаменитостей (статичный) -->
+<section id="famous-static" class="relative px-4 py-16 sm:py-20 bg-ink-700/40">
+    <!-- мягкая подсветка под ней -->
+    <div aria-hidden="true"
+         class="pointer-events-none absolute inset-x-0 -top-3 h-6 z-[9]
+            bg-gradient-to-r from-brand-500/0 via-brand-500/25 to-rose-500/0 blur-sm"></div>
+
+
+    <div class="mx-auto max-w-7xl">
+        <h2 class="text-2xl sm:text-3xl font-bold text-brand-200 mb-8 text-center">
+            Числа сознания знаменитостей
+        </h2>
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+
+            <!-- Илон Маск -->
+            <div class="bg-white/5 border border-white/10 rounded-2xl p-6 flex flex-col items-center text-center shadow-soft">
+                <img src="public/IlonMask.jpg" alt="Илон Маск" class="w-20 h-20 rounded-full object-cover mb-4">
+                <div class="font-bold text-lg mb-1">Илон Маск</div>
+                <div class="text-sm text-gray-300">Число сознания: <span class="text-white font-semibold">1</span></div>
+                <div class="text-sm text-gray-300">Миссия: <span class="text-white font-semibold">7</span></div>
+                <div class="text-sm text-gray-300">Реализация: <span class="text-white font-semibold">8</span></div>
+            </div>
+
+            <!-- Наполеон -->
+            <div class="bg-white/5 border border-white/10 rounded-2xl p-6 flex flex-col items-center text-center shadow-soft">
+                <img src="public/napoleon.jpeg" alt="Наполеон" class="w-20 h-20 rounded-full object-cover mb-4">
+                <div class="font-bold text-lg mb-1">Наполеон</div>
+                <div class="text-sm text-gray-300">Число сознания: <span class="text-white font-semibold">6</span></div>
+                <div class="text-sm text-gray-300">Миссия: <span class="text-white font-semibold">1</span></div>
+                <div class="text-sm text-gray-300">Реализация: <span class="text-white font-semibold">7</span></div>
+            </div>
+
+            <!-- Аль Капоне -->
+            <div class="bg-white/5 border border-white/10 rounded-2xl p-6 flex flex-col items-center text-center shadow-soft">
+                <img src="public/kapone.jpg" alt="Аль Капоне" class="w-20 h-20 rounded-full object-cover mb-4">
+                <div class="font-bold text-lg mb-1">Аль Капоне</div>
+                <div class="text-sm text-gray-300">Число сознания: <span class="text-white font-semibold">8</span></div>
+                <div class="text-sm text-gray-300">Миссия: <span class="text-white font-semibold">9</span></div>
+                <div class="text-sm text-gray-300">Реализация: <span class="text-white font-semibold">8</span></div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<section id="form" class="relative px-4 py-16 sm:py-24 bg-ink-800/40">
+    <!-- мягкая подсветка под ней -->
+    <div aria-hidden="true"
+         class="pointer-events-none absolute inset-x-0 -top-3 h-6 z-[9]
+            bg-gradient-to-r from-brand-500/0 via-brand-500/25 to-rose-500/0 blur-sm"></div>
+
+    <div class="mx-auto max-w-xl bg-white/5 backdrop-blur border border-white/10 p-6 sm:p-8 rounded-2xl shadow-soft">
+        <h2 class="text-2xl sm:text-3xl font-bold text-center mb-4 sm:mb-6 text-brand-200">Заполните форму</h2>
+        <form class="space-y-4 sm:space-y-5" id="calcForm" novalidate>
+            <div>
+                <label for="birthdate" class="block mb-2 text-gray-300">Дата рождения</label>
+                <input id="birthdate" name="birthdate" type="date"
+                       class="w-full p-3 rounded-xl bg-white/10 text-white placeholder-gray-400 border border-white/10
+               focus:outline-none focus:ring-2 focus:ring-brand-500/60 focus:border-white/20 transition" required/>
+                <p id="birthdateError" class="hidden mt-2 text-sm text-rose-300">Введите корректную дату.</p>
+            </div>
+            <button type="submit"
+                    class="w-full rounded-full py-3 font-semibold bg-gradient-to-r from-brand-500 to-rose-500
+              shadow-soft hover:opacity-95 focus:outline-none focus:ring-2 focus:ring-brand-500/40 transition">
+                Рассчитать
+            </button>
+        </form>
+    </div>
+
+    <div class="mx-auto max-w-7xl mt-6 sm:mt-8 px-2 sm:px-4">
+        <div id="resultBlock"
+             class="opacity-0 pointer-events-none transition-all duration-700 ease-out
+         bg-white/5 border border-white/10 p-4 sm:p-6 md:p-8 rounded-2xl text-center text-white text-base">
+            <!-- динамический контент -->
+        </div>
+    </div>
+</section>
+
+<footer class="py-8 text-center text-gray-400 text-sm bg-ink-900/40 border-t border-white/10">
+    © 2025 <span class="text-brand-500 font-semibold">Suzaich.ru</span>
+</footer>
+
+<a href="#form" id="toFormBtn"
+   class="fixed left-3 bottom-3 sm:left-6 sm:bottom-6 z-50
+          inline-flex items-center gap-2 rounded-full px-4 py-2
+          bg-gradient-to-r from-brand-500 to-rose-500 text-white font-semibold
+          shadow-soft ring-1 ring-brand-500/30
+          transition-all duration-300
+          opacity-0 translate-y-2 pointer-events-none">
+    <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M12 5v14m0-14l-5 5m5-5l5 5"/>
+    </svg>
+    <span>К форме</span>
+</a>
+
+<script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,16 @@
+html { scroll-behavior: smooth; }
+.overlay-gradient{
+    background: radial-gradient(1200px 600px at 50% 40%, rgba(255,255,255,0.06), transparent 60%),
+    linear-gradient(180deg, rgba(0,0,0,0.35), rgba(0,0,0,0.55));
+}
+body{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;text-rendering:optimizeLegibility;font-kerning:normal}
+.balance{ text-wrap: balance } .pretty{ text-wrap: pretty } .hyphens{ hyphens:auto }
+
+/* слот для «Подробно» (как у тебя сейчас) */
+.details-slot{ position:relative }
+.details-spacer{ height:0 }
+.details-panel{ position:absolute; inset:0; transform-origin:top; transform:scaleY(.96); opacity:0; will-change:transform,opacity; display:none }
+
+@media (prefers-reduced-motion: reduce){
+    *{ animation-duration:.001ms !important; animation-iteration-count:1 !important; transition-duration:.001ms !important; scroll-behavior:auto !important; }
+}
