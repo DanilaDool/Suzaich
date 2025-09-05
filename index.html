@@ -4,10 +4,38 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Suzaich — расчёт по дате рождения</title>
+    <meta name="description" content="Сюцай — узнайте число судьбы, миссию и энергию года по дате рождения. Мгновенный расчёт без регистрации.">
+    <meta property="og:title" content="Сюцай — расчёт по дате рождения">
+    <meta property="og:description" content="Узнайте число судьбы, миссию и энергию года. Мгновенный расчёт без регистрации.">
+    <meta property="og:image" content="https://suzaich.ru/public/c0547769-e468-4f7b-a96b-86159f71a8f3.png">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://suzaich.ru/">
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
     <link rel="icon" type="image/png" href="public/c0547769-e468-4f7b-a96b-86159f71a8f3.png">
     <link rel="stylesheet" href="style.css">
+    <link rel="canonical" href="https://suzaich.ru/">
+    <meta property="og:site_name" content="Suzaich">
+    <meta property="og:locale" content="ru_RU">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+
+
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            "name": "Suzaich",
+            "url": "https://suzaich.ru/",
+            "inLanguage": "ru-RU",
+            "potentialAction": {
+                "@type": "SearchAction",
+                "target": "https://suzaich.ru/#form",
+                "query-input": "required name=search_term_string"
+            }
+        }
+    </script>
+
     <script>
         tailwind.config = {
             theme: {
@@ -26,6 +54,8 @@
             }
         }
     </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 </head>
 <body class="bg-gradient-to-br from-[#0f0f0f] via-[#1a1a1a] to-[#1e1c1a] text-white font-sans antialiased selection:bg-brand-500/30">
 
@@ -90,17 +120,23 @@
                 <span class="text-white font-semibold">Сюцай</span> — система числового анализа личности на основе даты рождения.
                 Помогает увидеть природные таланты, зоны роста и ключевые задачи.
                 Это не «магия», а инструмент осознанности и личной дисциплины.
+                Расчёт опирается на простые формулы и даёт короткое, понятное резюме по характеру, мотивации и текущему периоду жизни.
+                Эти подсказки удобно использовать для самоанализа, планирования карьеры и отношений — без мистики и категоричных «ярлыков».
+                Интерпретации мягкие и прикладные: они подсказывают направление и конкретные первые шаги, а окончательные решения всегда остаются за вами.
             </p>
         </div>
+
         <div class="bg-white/5 backdrop-blur-xs border border-white/10 rounded-2xl p-6 sm:p-8 shadow-soft">
             <h3 class="text-2xl sm:text-3xl font-bold text-brand-200 mb-3 sm:mb-4">Как работает расчёт?</h3>
             <ul class="space-y-2.5 sm:space-y-3 text-gray-200">
                 <li><span class="text-white font-semibold">Число сознания</span> — ваше внутреннее «я», ядро восприятия.</li>
-                <li>Расчет - 26.02.2008 = 26 = 2 + 6 = 8</li>
+                <li>Расчет - 08.05.2015 = 08 = 0 + 8 = 8</li>
                 <li><span class="text-white font-semibold">Число миссии</span> — роль и задача на жизненном пути.</li>
                 <li>Расчет - 03.01.1984 - 0 + 3 + 1 + 1 + 9 + 8 + 4 = 26 = 2 + 6 = 8</li>
                 <li><span class="text-white font-semibold">Число реализации</span> — проявление в мире, синтез первых двух.</li>
-                <li>Расчет - 29.02.1984 - чс = 2 (2 + 9) мс = 8 (5 + 3) = 2 + 8</li>
+                <li>Расчет - 29.02.1984 - чс = 2 (2 + 9) мс = 8 (5 + 3) = 2 + 8 = 10 = 1 + 0 = 1 чр = 1</li>
+                <li><span class="text-white font-semibold">Число личного года</span> — Под воздействием какой энергии вы будете находиться в этом году.</li>
+                <li>Расчет - 09.05.2008 - чс = 9 + месяц = 5 + текущий год = 2025(9) = 9 + 5 + 9 = 23 = 2 + 3 = 5</li>
             </ul>
             <p class="mt-4 text-gray-300">Расчёт моментальный. Без регистрации.</p>
         </div>
@@ -188,7 +224,17 @@
 
 <footer class="py-8 text-center text-gray-400 text-sm bg-ink-900/40 border-t border-white/10">
     © 2025 <span class="text-brand-500 font-semibold">Suzaich.ru</span>
+
+    <div class="mt-4 flex items-center justify-center gap-2 text-base">
+        <span>Хочешь личную консультацию? Чтобы полностью понять себя и сделать правильный выбор в жизни — пиши!</span>
+        <a href="https://t.me/neffig0ng" target="_blank" rel="noopener"
+           class="inline-flex items-center gap-2 text-brand-500 hover:text-brand-400 transition">
+            <img src="public/telegram.png" alt="Telegram" class="h-8 w-8 rounded-full">
+
+        </a>
+    </div>
 </footer>
+
 
 <a href="#form" id="toFormBtn"
    class="fixed left-3 bottom-3 sm:left-6 sm:bottom-6 z-50
@@ -202,6 +248,26 @@
     </svg>
     <span>К форме</span>
 </a>
+
+<!-- Telegram Floating Button -->
+<a href="https://t.me/suzaich" target="_blank" rel="noopener"
+   class="fixed bottom-3 left-3 sm:bottom-4 sm:left-4 z-50
+          flex items-center gap-2 sm:gap-3 px-3 py-2 sm:px-4 sm:py-2
+          rounded-full bg-white shadow-lg
+          text-gray-800 font-medium text-xs sm:text-sm
+          hover:bg-gray-100 transition">
+    <!-- Иконка Telegram -->
+    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"
+         class="w-4 h-4 sm:w-5 sm:h-5 text-sky-500">
+        <path d="M9.999 15.172l-.399 5.62c.57 0 .815-.245 1.11-.54l2.664-2.57
+                 5.525 4.047c1.012.555 1.725.265 1.978-.94l3.59-16.84h.001
+                 c.318-1.48-.534-2.06-1.523-1.7L1.7 9.135c-1.44.564-1.417 1.37-.245 1.74l5.632 1.76
+                 13.08-8.244c.615-.373 1.176-.167.715.206"/>
+    </svg>
+    <span class="hidden sm:inline">Хочешь узнать интересный факт про себя? — Заходи</span>
+    <span class="sm:hidden">Узнать факт про себя</span>
+</a>
+
 
 <script src="main.js"></script>
 </body>
