@@ -69,10 +69,9 @@
             <a href="#about" class="hover:text-white transition">О системе</a>
             <a href="#form"  class="hover:text-white transition">Расчёт</a>
             <a href="#famous-static"  class="hover:text-white transition">Числа знаменитостей</a>
-
         </nav>
-        <a href="#form" class="ml-4 inline-flex items-center justify-center rounded-full px-4 py-2 bg-gradient-to-r from-brand-500 to-rose-500 font-semibold shadow-soft hover:opacity-95 focus:outline-none focus:ring-2 focus:ring-brand-500/50 transition">
-            Получить расчёт
+        <a href="#consult" class="ml-4 inline-flex items-center justify-center rounded-full px-4 py-2 bg-gradient-to-r from-brand-500 to-rose-500 font-semibold shadow-soft hover:opacity-95 focus:outline-none focus:ring-2 focus:ring-brand-500/50 transition">
+            Личная Консультация
         </a>
     </div>
 </header>
@@ -190,23 +189,22 @@
 
 
 <section id="form" class="relative px-4 py-16 sm:py-24 bg-ink-800/40">
-    <!-- мягкая подсветка под ней -->
     <div aria-hidden="true"
          class="pointer-events-none absolute inset-x-0 -top-3 h-6 z-[9]
             bg-gradient-to-r from-brand-500/0 via-brand-500/25 to-rose-500/0 blur-sm"></div>
 
-    <div class="mx-auto max-w-xl bg-white/5 backdrop-blur border border-white/10 p-6 sm:p-8 rounded-2xl shadow-soft">
+    <div class="mx-auto max-w-xl md:max-w-2xl bg-white/5 backdrop-blur border border-white/10 p-6 sm:p-8 rounded-2xl shadow-soft">
         <h2 class="text-2xl sm:text-3xl font-bold text-center mb-4 sm:mb-6 text-brand-200">Заполните форму</h2>
         <form class="space-y-4 sm:space-y-5" id="calcForm" novalidate>
             <div>
-                <label for="birthdate" class="block mb-2 text-gray-300">Дата рождения</label>
+                <label for="birthdate" class="block mb-2 text-gray-300 text-base sm:text-lg">Дата рождения</label>
                 <input id="birthdate" name="birthdate" type="date"
-                       class="w-full p-3 rounded-xl bg-white/10 text-white placeholder-gray-400 border border-white/10
+                       class="w-full h-12 sm:h-14 px-3 sm:px-4 rounded-xl bg-white/10 text-white text-base sm:text-lg placeholder-gray-400 border border-white/10
                focus:outline-none focus:ring-2 focus:ring-brand-500/60 focus:border-white/20 transition" required/>
                 <p id="birthdateError" class="hidden mt-2 text-sm text-rose-300">Введите корректную дату.</p>
             </div>
             <button type="submit"
-                    class="w-full rounded-full py-3 font-semibold bg-gradient-to-r from-brand-500 to-rose-500
+                    class="w-full rounded-full py-3 sm:py-4 text-base sm:text-lg font-semibold bg-gradient-to-r from-brand-500 to-rose-500
               shadow-soft hover:opacity-95 focus:outline-none focus:ring-2 focus:ring-brand-500/40 transition">
                 Рассчитать
             </button>
@@ -222,17 +220,93 @@
     </div>
 </section>
 
+<!-- Личная консультация -->
+<section id="consult" class="px-4 py-16 sm:py-24 bg-ink-700/40 relative">
+    <!-- мягкая подсветка -->
+    <div aria-hidden="true"
+         class="pointer-events-none absolute inset-x-0 -top-3 h-6 z-[9]
+            bg-gradient-to-r from-brand-500/0 via-brand-500/25 to-rose-500/0 blur-sm"></div>
+
+    <div class="mx-auto max-w-5xl text-center">
+        <h2 class="text-2xl sm:text-3xl font-bold text-brand-200 mb-6">Личная консультация</h2>
+        <p class="text-gray-300 text-base sm:text-lg leading-relaxed max-w-3xl mx-auto mb-8">
+            Консультация проводится в онлайн-формате (Telegram или Zoom).
+            Мы подробно разберём вашу дату рождения, обсудим сильные стороны и зоны роста,
+            определим ключевые жизненные задачи и составим индивидуальные рекомендации.
+            Всё это проходит в формате живого общения с возможностью задать любые вопросы.
+        </p>
+
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 text-left mb-10">
+            <div class="bg-white/5 border border-white/10 rounded-2xl p-6 shadow-soft">
+                <h3 class="text-lg font-semibold text-white mb-2">📌 Первый этап</h3>
+                <p class="text-gray-300 text-sm leading-relaxed">
+                    Вы присылаете дату рождения и несколько вопросов, которые хотите разобрать.
+                </p>
+            </div>
+            <div class="bg-white/5 border border-white/10 rounded-2xl p-6 shadow-soft">
+                <h3 class="text-lg font-semibold text-white mb-2">💬 Онлайн-созвон</h3>
+                <p class="text-gray-300 text-sm leading-relaxed">
+                    В течение 90 минут мы обсуждаем ваш расчёт и детально разбираем личные моменты.
+                </p>
+            </div>
+            <div class="bg-white/5 border border-white/10 rounded-2xl p-6 shadow-soft">
+                <h3 class="text-lg font-semibold text-white mb-2">📝 Рекомендации</h3>
+                <p class="text-gray-300 text-sm leading-relaxed">
+                    После консультации вы получите резюме с подсказками и направлениями для работы над собой.
+                </p>
+            </div>
+        </div>
+
+        <p class="text-gray-200 text-base sm:text-lg leading-relaxed font-semibold mb-10">
+            Чтобы записаться — отправьте слово <span class="text-brand-400">«Консультация»</span> в личные сообщения.<br>
+            Стоимость консультации: <span class="text-lime-400">1500 рублей</span>.<br>
+            Длительность: <span class="text-lime-400">90 минут</span>.
+        </p>
+
+        <a href="https://t.me/neffig0ng" target="_blank" rel="noopener"
+           class="inline-flex items-center justify-center rounded-full px-8 py-3
+                  bg-gradient-to-r from-brand-500 to-rose-500 text-white font-semibold
+                  shadow-soft hover:opacity-95 focus:outline-none focus:ring-2 focus:ring-brand-500/50 transition">
+            Записаться на консультацию
+        </a>
+    </div>
+</section>
+
+
+
+
 <footer class="py-8 text-center text-gray-400 text-sm bg-ink-900/40 border-t border-white/10">
     © 2025 <span class="text-brand-500 font-semibold">Suzaich.ru</span>
 
-    <div class="mt-4 flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-2 text-sm sm:text-base px-4">
-        <span class="text-center sm:text-left">
-            Хочешь личную консультацию? Чтобы полностью понять себя и сделать правильный выбор в жизни — пиши!
+    <div class="mt-4 flex flex-col items-center gap-3 text-sm sm:text-base px-4">
+        <span class="text-center">
+            Хочешь личную консультацию? Чтобы полностью понять себя и сделать правильный выбор в жизни — пиши! —
+            <a href="https://t.me/neffig0ng" target="_blank" rel="noopener"
+               class="font-semibold bg-gradient-to-r from-brand-500 to-rose-500 bg-clip-text text-transparent hover:opacity-80 transition">
+                НАПИСАТЬ
+            </a>
         </span>
-        <a href="https://t.me/neffig0ng" target="_blank" rel="noopener"
-           class="inline-flex items-center gap-2 text-brand-500 hover:text-brand-400 transition mt-3 sm:mt-0">
-            <img src="public/telegram.png" alt="Telegram" class="h-10 w-10 sm:h-8 sm:w-8 rounded-full">
-        </a>
+
+        <!-- Заголовок для иконок -->
+        <p class="mt-4 text-gray-300 font-semibold">Наши соцсети</p>
+
+        <!-- Блок иконок -->
+        <div class="flex items-center gap-4 mt-2">
+            <a href="https://t.me/neffig0ng" target="_blank" rel="noopener"
+               class="inline-flex items-center justify-center hover:scale-110 transition">
+                <img src="public/telegram.png" alt="Telegram" class="h-12 w-12 rounded-full">
+            </a>
+
+            <a href="https://www.instagram.com/fruitleva?igsh=b2F3NWZ0NTlwZWo3&utm_source=qr" target="_blank" rel="noopener"
+               class="inline-flex items-center justify-center hover:scale-110 transition">
+                <img src="public/instagram.png" alt="Instagram" class="h-12 w-12 ">
+            </a>
+
+            <a href="https://www.tiktok.com/@leva5598?_t=ZN-8zVEmB3JTUc&_r=1" target="_blank" rel="noopener"
+               class="inline-flex items-center justify-center hover:scale-110 transition">
+                <img src="public/tiktok.png" alt="TikTok" class="h-14 w-14 ">
+            </a>
+        </div>
     </div>
 </footer>
 
@@ -250,25 +324,47 @@
 </a>
 
 <!-- Telegram Floating Button -->
-<a href="https://t.me/suzaich" target="_blank" rel="noopener"
-   class="fixed bottom-16 left-3 sm:bottom-20 sm:left-4 z-50
-          flex items-center gap-2 sm:gap-3 px-3 py-2 sm:px-4 sm:py-2
-          rounded-full bg-white shadow-lg
-          text-gray-800 font-medium text-xs sm:text-sm
-          hover:bg-gray-100 transition">
-    <!-- Иконка Telegram -->
-    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"
-         class="w-4 h-4 sm:w-5 sm:h-5 text-sky-500">
-        <path d="M9.999 15.172l-.399 5.62c.57 0 .815-.245 1.11-.54l2.664-2.57
-                 5.525 4.047c1.012.555 1.725.265 1.978-.94l3.59-16.84h.001
-                 c.318-1.48-.534-2.06-1.523-1.7L1.7 9.135c-1.44.564-1.417 1.37-.245 1.74l5.632 1.76
-                 13.08-8.244c.615-.373 1.176-.167.715.206"/>
-    </svg>
-    <span class="hidden sm:inline">Хочешь узнать интересный факт про себя? — Заходи</span>
-    <span class="sm:hidden">Узнать факт про себя</span>
-</a>
+<div id="tgButton"
+     class="fixed bottom-16 left-3 sm:bottom-20 sm:left-4 z-50
+            flex items-center gap-2 sm:gap-3 px-3 py-2 sm:px-4 sm:py-2
+            rounded-full bg-white shadow-lg
+            text-gray-800 font-medium text-xs sm:text-sm
+            hover:bg-gray-100 transition">
 
+    <!-- Ссылка на Telegram -->
+    <a href="https://t.me/suzaich" target="_blank" rel="noopener" class="flex items-center gap-2">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"
+             class="w-4 h-4 sm:w-5 sm:h-5 text-sky-500">
+            <path d="M9.999 15.172l-.399 5.62c.57 0 .815-.245 1.11-.54l2.664-2.57
+                     5.525 4.047c1.012.555 1.725.265 1.978-.94l3.59-16.84h.001
+                     c.318-1.48-.534-2.06-1.523-1.7L1.7 9.135c-1.44.564-1.417 1.37-.245 1.74l5.632 1.76
+                     13.08-8.244c.615-.373 1.176-.167.715.206"/>
+        </svg>
+        <span class="hidden sm:inline">Хочешь узнать интересный факт про себя? — Заходи</span>
+        <span class="sm:hidden">Узнать факт про себя</span>
+    </a>
 
+    <!-- Крестик -->
+    <button onclick="closeTgButton()"
+            class="ml-2 text-gray-500 hover:text-gray-700 focus:outline-none">
+        ✕
+    </button>
+</div>
+
+<script>
+    function closeTgButton() {
+        const tgButton = document.getElementById('tgButton');
+        tgButton.innerHTML = `
+    <a href="https://t.me/suzaich" target="_blank" rel="noopener"
+       class="block">
+        <img src="public/telegram.png" alt="Telegram"
+             class="w-12 h-12 sm:w-14 sm:h-14 hover:scale-110 transition">
+    </a>
+  `;
+        // убираем белый фон, обводку и круг
+        tgButton.className = "fixed bottom-16 left-3 sm:bottom-20 sm:left-4 z-50";
+    }
+</script>
 
 <script src="main.js"></script>
 </body>
