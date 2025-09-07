@@ -199,12 +199,12 @@
             <div>
                 <label for="birthdate" class="block mb-2 text-gray-300 text-base sm:text-lg">Дата рождения</label>
                 <input id="birthdate" name="birthdate" type="date"
-                       class="appearance-none w-full h-12 sm:h-14 px-3 sm:px-4
-              rounded-xl bg-white/10 text-white text-base sm:text-lg
-              placeholder-gray-400 border border-white/10
-              focus:outline-none focus:ring-2 focus:ring-brand-500/60 focus:border-white/20 transition
-              [color-scheme:dark]"
+                       class="custom-date-input
+              w-full h-12 sm:h-14 px-3 sm:px-4
+              rounded-xl text-white text-base sm:text-lg
+              focus:outline-none focus:ring-2 focus:ring-brand-500/60 focus:border-white/20 transition"
                        required />
+
                 <p id="birthdateError" class="hidden mt-2 text-sm text-rose-300">Введите корректную дату.</p>
             </div>
             <button type="submit"
