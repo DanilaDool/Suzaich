@@ -1,6 +1,28 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-R4FK2RRGQ0"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-R4FK2RRGQ0');
+    </script>
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript">
+        (function(m,e,t,r,i,k,a){
+            m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+            m[i].l=1*new Date();
+            for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+            k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+        })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=104226196', 'ym');
+
+        ym(104226196, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", accurateTrackBounce:true, trackLinks:true});
+    </script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/104226196" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Suzaich — расчёт по дате рождения</title>
@@ -12,7 +34,9 @@
     <meta property="og:url" content="https://suzaich.ru/">
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
-    <link rel="icon" type="image/png" href="public/c0547769-e468-4f7b-a96b-86159f71a8f3.png">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="public/c0547769-e468-4f7b-a96b-86159f71a8f3.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="public/c0547769-e468-4f7b-a96b-86159f71a8f3.png">
     <link rel="stylesheet" href="style.css">
     <link rel="canonical" href="https://suzaich.ru/">
     <meta property="og:site_name" content="Suzaich">
@@ -61,26 +85,64 @@
 
 <header class="fixed top-0 inset-x-0 z-50 backdrop-blur bg-ink-900/30 border-b border-white/10">
     <div class="mx-auto max-w-7xl px-4 py-3 flex items-center justify-between">
-        <a href="#" class="flex items-center gap-2 font-extrabold tracking-wide">
+        <a href="/" class="flex items-center gap-2 font-extrabold tracking-wide">
             <span class="inline-block w-2.5 h-2.5 rounded-full bg-brand-500 animate-pulse"></span>
             <span>Suzaich</span>
         </a>
-        <nav class="hidden sm:flex items-center gap-6 text-sm text-gray-200">
+        
+        <!-- Desktop Navigation -->
+        <nav class="hidden lg:flex items-center gap-6 text-sm text-gray-200">
             <a href="#about" class="hover:text-white transition">О системе</a>
             <a href="#form"  class="hover:text-white transition">Расчёт</a>
-            <a href="#famous-static"  class="hover:text-white transition">Числа знаменитостей</a>
+            <a href="#famous-static" class="hover:text-white transition">Числа знаменитостей</a>
+            <a href="chisla-soznaniya/" class="hover:text-white transition">Числа сознания</a>
+            <a href="missii/" class="hover:text-white transition">Миссии</a>
+            <a href="realizatsiya/" class="hover:text-white transition">Реализации</a>
         </nav>
-        <a href="#consult" class="ml-4 inline-flex items-center justify-center rounded-full px-4 py-2 bg-gradient-to-r from-brand-500 to-rose-500 font-semibold shadow-soft hover:opacity-95 focus:outline-none focus:ring-2 focus:ring-brand-500/50 transition">
+        
+        <!-- Desktop CTA Button -->
+        <a href="/#consult" class="hidden lg:inline-flex items-center justify-center rounded-full px-4 py-2 bg-gradient-to-r from-brand-500 to-rose-500 font-semibold shadow-soft hover:opacity-95 focus:outline-none focus:ring-2 focus:ring-brand-500/50 transition">
             Личная Консультация
         </a>
+        
+        <!-- Mobile Menu Button -->
+        <button id="mobile-menu-button" class="lg:hidden flex items-center justify-center w-10 h-10 rounded-lg bg-white/10 hover:bg-white/20 transition">
+            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+        </button>
+    </div>
+    
+    <!-- Mobile Navigation Menu -->
+    <div id="mobile-menu" class="lg:hidden hidden bg-ink-900/95 backdrop-blur border-t border-white/10">
+        <div class="px-4 py-4 space-y-3">
+            <a href="#about" class="block py-2 text-gray-200 hover:text-white transition">О системе</a>
+            <a href="#form" class="block py-2 text-gray-200 hover:text-white transition">Расчёт</a>
+            <a href="#famous-static" class="block py-2 text-gray-200 hover:text-white transition">Числа знаменитостей</a>
+            <a href="chisla-soznaniya/" class="block py-2 text-gray-200 hover:text-white transition">Числа сознания</a>
+            <a href="missii/" class="block py-2 text-gray-200 hover:text-white transition">Миссии</a>
+            <a href="realizatsiya/" class="block py-2 text-gray-200 hover:text-white transition">Реализации</a>
+            <div class="pt-2 border-t border-white/10">
+                <a href="/#consult" class="block w-full text-center py-3 rounded-lg bg-gradient-to-r from-brand-500 to-rose-500 font-semibold shadow-soft hover:opacity-95 transition">
+                    Личная Консультация
+                </a>
+            </div>
+        </div>
     </div>
 </header>
 
+
 <section class="relative min-h-[80svh] sm:min-h-screen flex items-center justify-center px-4 pt-20 sm:pt-24 overflow-hidden">
-    <video autoplay muted loop playsinline class="pointer-events-none absolute inset-0 w-full h-full object-cover brightness-50">
+    <video autoplay muted loop playsinline class="pointer-events-none absolute inset-0 w-full h-full object-cover brightness-50"
+            onerror="this.style.display='none'; document.getElementById('video-fallback').style.display='block';">
         <source src="public/fire2.mp4" type="video/mp4" />
         Ваш браузер не поддерживает видео фон.
     </video>
+    
+    <!-- Fallback для случаев, когда видео не загружается -->
+    <div id="video-fallback" class="pointer-events-none absolute inset-0 w-full h-full" style="display: none;">
+        <div class="w-full h-full bg-gradient-to-br from-orange-900/20 via-red-900/20 to-yellow-900/20"></div>
+    </div>
     <div class="absolute inset-0 overlay-gradient"></div>
 
     <div class="relative z-10 mx-auto max-w-3xl text-center">
@@ -276,9 +338,6 @@
     </div>
 </section>
 
-
-
-
 <footer class="py-8 text-center text-gray-400 text-sm bg-ink-900/40 border-t border-white/10">
     © 2025 <span class="text-brand-500 font-semibold">Suzaich.ru</span>
 
@@ -326,6 +385,47 @@
     </svg>
     <span>К форме</span>
 </a>
+
+<!-- Mobile Menu JavaScript -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+    
+    if (mobileMenuButton && mobileMenu) {
+        mobileMenuButton.addEventListener('click', function() {
+            mobileMenu.classList.toggle('hidden');
+            
+            // Анимация иконки гамбургера
+            const icon = mobileMenuButton.querySelector('svg');
+            if (mobileMenu.classList.contains('hidden')) {
+                icon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>';
+            } else {
+                icon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>';
+            }
+        });
+        
+        // Закрытие меню при клике на ссылку
+        const mobileLinks = mobileMenu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                mobileMenu.classList.add('hidden');
+                const icon = mobileMenuButton.querySelector('svg');
+                icon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>';
+            });
+        });
+        
+        // Закрытие меню при клике вне его
+        document.addEventListener('click', function(event) {
+            if (!mobileMenuButton.contains(event.target) && !mobileMenu.contains(event.target)) {
+                mobileMenu.classList.add('hidden');
+                const icon = mobileMenuButton.querySelector('svg');
+                icon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>';
+            }
+        });
+    }
+});
+</script>
 
 <script src="main.js"></script>
 </body>

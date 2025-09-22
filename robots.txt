@@ -1,0 +1,32 @@
+User-agent: *
+Allow: /
+
+# Главная страница
+Allow: /index.html
+Allow: /
+
+# Разделы сайта
+Allow: /chisla-soznaniya/
+Allow: /missii/
+Allow: /realizatsiya/
+
+# Статические ресурсы
+Allow: /style.css
+Allow: /main.js
+Allow: /public/
+
+# Sitemap
+Sitemap: https://suzaich.ru/sitemap.xml
+
+# Дополнительные директивы для лучшего SEO
+Crawl-delay: 1
+
+# Блокируем служебные файлы (если появятся)
+Disallow: /.htaccess
+Disallow: /backup/
+Disallow: /temp/
+Disallow: /logs/
+Disallow: /*.log$
+
+# Разрешаем индексацию всех HTML страниц
+Allow: /*.html
